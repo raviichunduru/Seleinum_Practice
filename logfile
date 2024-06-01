@@ -1,0 +1,267 @@
+[1717224883.174][INFO]: Starting ChromeDriver 125.0.6422.141 (4b1e83937122185343ba92e909b021f307c719ca-refs/branch-heads/6422@{#1186}) on port 30295
+[1717224883.174][INFO]: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+[1717224883.316][INFO]: [5bac800fc1c3e792950103a8a45a5539] COMMAND InitSession {
+   "capabilities": {
+      "firstMatch": [ {
+         "acceptInsecureCerts": true,
+         "browserName": "chrome",
+         "goog:chromeOptions": {
+            "args": [ "--start-maximized" ],
+            "binary": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+            "excludeSwitches": [ "disable-popup-blocking" ],
+            "extensions": [  ]
+         },
+         "pageLoadStrategy": "none",
+         "timeouts": {
+            "pageLoad": 10000,
+            "script": 3000
+         }
+      } ]
+   }
+}
+[1717224883.318][INFO]: Populating Preferences file: {
+   "alternate_error_pages": {
+      "enabled": false
+   },
+   "autofill": {
+      "enabled": false
+   },
+   "browser": {
+      "check_default_browser": false
+   },
+   "distribution": {
+      "import_bookmarks": false,
+      "import_history": false,
+      "import_search_engine": false,
+      "make_chrome_default_for_user": false,
+      "skip_first_run_ui": true
+   },
+   "dns_prefetching": {
+      "enabled": false
+   },
+   "profile": {
+      "content_settings": {
+         "pattern_pairs": {
+            "https://*,*": {
+               "media-stream": {
+                  "audio": "Default",
+                  "video": "Default"
+               }
+            }
+         }
+      },
+      "default_content_setting_values": {
+         "geolocation": 1
+      },
+      "default_content_settings": {
+         "geolocation": 1,
+         "mouselock": 1,
+         "notifications": 1,
+         "popups": 1,
+         "ppapi-broker": 1
+      },
+      "password_manager_enabled": false
+   },
+   "safebrowsing": {
+      "enabled": false
+   },
+   "search": {
+      "suggest_enabled": false
+   },
+   "translate": {
+      "enabled": false
+   }
+}
+[1717224883.318][INFO]: Populating Local State file: {
+   "background_mode": {
+      "enabled": false
+   },
+   "ssl": {
+      "rev_checking": {
+         "enabled": false
+      }
+   }
+}
+[1717224883.319][INFO]: ChromeDriver supports communication with Chrome via pipes. This is more reliable and more secure.
+[1717224883.319][INFO]: Use the --remote-debugging-pipe Chrome switch instead of the default --remote-debugging-port to enable this communication mode.
+[1717224883.321][INFO]: Launching chrome: "C:\Program Files\Google\Chrome\Application\chrome.exe" --allow-pre-commit-input --disable-background-networking --disable-backgrounding-occluded-windows --disable-client-side-phishing-detection --disable-default-apps --disable-hang-monitor --disable-prompt-on-repost --disable-sync --enable-automation --enable-logging --ignore-certificate-errors --log-level=0 --no-first-run --no-service-autorun --password-store=basic --remote-debugging-port=0 --start-maximized --test-type=webdriver --use-mock-keychain --user-data-dir="C:\Users\admin\AppData\Local\Temp\scoped_dir5912_1790806509" data:,
+[1717224884.097][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1717224884.102][INFO]: [5bac800fc1c3e792950103a8a45a5539] RESPONSE InitSession {
+   "capabilities": {
+      "acceptInsecureCerts": true,
+      "browserName": "chrome",
+      "browserVersion": "125.0.6422.113",
+      "chrome": {
+         "chromedriverVersion": "125.0.6422.141 (4b1e83937122185343ba92e909b021f307c719ca-refs/branch-heads/6422@{#1186})",
+         "userDataDir": "C:\\Users\\admin\\AppData\\Local\\Temp\\scoped_dir5912_1790806509"
+      },
+      "fedcm:accounts": true,
+      "goog:chromeOptions": {
+         "debuggerAddress": "localhost:59430"
+      },
+      "networkConnectionEnabled": false,
+      "pageLoadStrategy": "none",
+      "platformName": "windows",
+      "proxy": {
+      },
+      "setWindowRect": true,
+      "strictFileInteractability": false,
+      "timeouts": {
+         "implicit": 0,
+         "pageLoad": 10000,
+         "script": 3000
+      },
+      "unhandledPromptBehavior": "dismiss and notify",
+      "webauthn:extension:credBlob": true,
+      "webauthn:extension:largeBlob": true,
+      "webauthn:extension:minPinLength": true,
+      "webauthn:extension:prf": true,
+      "webauthn:virtualAuthenticators": true
+   },
+   "sessionId": "5bac800fc1c3e792950103a8a45a5539"
+}
+[1717224884.236][INFO]: [5bac800fc1c3e792950103a8a45a5539] COMMAND Navigate {
+   "url": "https://google.com"
+}
+[1717224884.236][INFO]: Waiting for pending navigations...
+[1717224884.236][INFO]: Done waiting for pending navigations. Status: ok
+[1717224884.236][INFO]: Waiting for pending navigations...
+[1717224884.236][INFO]: Done waiting for pending navigations. Status: ok
+[1717224884.236][INFO]: [5bac800fc1c3e792950103a8a45a5539] RESPONSE Navigate
+[1717224884.250][INFO]: [5bac800fc1c3e792950103a8a45a5539] COMMAND CloseWindow {
+}
+[1717224884.386][INFO]: [5bac800fc1c3e792950103a8a45a5539] RESPONSE CloseWindow [  ]
+[06-01-2024 12:26:57.128][INFO]: Starting ChromeDriver 125.0.6422.141 (4b1e83937122185343ba92e909b021f307c719ca-refs/branch-heads/6422@{#1186}) on port 10974
+[06-01-2024 12:26:57.128][INFO]: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+[06-01-2024 12:26:57.274][INFO]: [ea43361188fea65dc510ea4f7e80afbe] COMMAND InitSession {
+   "capabilities": {
+      "firstMatch": [ {
+         "acceptInsecureCerts": true,
+         "browserName": "chrome",
+         "goog:chromeOptions": {
+            "args": [ "--start-maximized" ],
+            "binary": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+            "excludeSwitches": [ "disable-popup-blocking" ],
+            "extensions": [  ]
+         },
+         "pageLoadStrategy": "none",
+         "timeouts": {
+            "pageLoad": 10000,
+            "script": 3000
+         }
+      } ]
+   }
+}
+[06-01-2024 12:26:57.274][INFO]: Populating Preferences file: {
+   "alternate_error_pages": {
+      "enabled": false
+   },
+   "autofill": {
+      "enabled": false
+   },
+   "browser": {
+      "check_default_browser": false
+   },
+   "distribution": {
+      "import_bookmarks": false,
+      "import_history": false,
+      "import_search_engine": false,
+      "make_chrome_default_for_user": false,
+      "skip_first_run_ui": true
+   },
+   "dns_prefetching": {
+      "enabled": false
+   },
+   "profile": {
+      "content_settings": {
+         "pattern_pairs": {
+            "https://*,*": {
+               "media-stream": {
+                  "audio": "Default",
+                  "video": "Default"
+               }
+            }
+         }
+      },
+      "default_content_setting_values": {
+         "geolocation": 1
+      },
+      "default_content_settings": {
+         "geolocation": 1,
+         "mouselock": 1,
+         "notifications": 1,
+         "popups": 1,
+         "ppapi-broker": 1
+      },
+      "password_manager_enabled": false
+   },
+   "safebrowsing": {
+      "enabled": false
+   },
+   "search": {
+      "suggest_enabled": false
+   },
+   "translate": {
+      "enabled": false
+   }
+}
+[06-01-2024 12:26:57.274][INFO]: Populating Local State file: {
+   "background_mode": {
+      "enabled": false
+   },
+   "ssl": {
+      "rev_checking": {
+         "enabled": false
+      }
+   }
+}
+[06-01-2024 12:26:57.274][INFO]: ChromeDriver supports communication with Chrome via pipes. This is more reliable and more secure.
+[06-01-2024 12:26:57.274][INFO]: Use the --remote-debugging-pipe Chrome switch instead of the default --remote-debugging-port to enable this communication mode.
+[06-01-2024 12:26:57.274][INFO]: Launching chrome: "C:\Program Files\Google\Chrome\Application\chrome.exe" --allow-pre-commit-input --disable-background-networking --disable-backgrounding-occluded-windows --disable-client-side-phishing-detection --disable-default-apps --disable-hang-monitor --disable-prompt-on-repost --disable-sync --enable-automation --enable-logging --ignore-certificate-errors --log-level=0 --no-first-run --no-service-autorun --password-store=basic --remote-debugging-port=0 --start-maximized --test-type=webdriver --use-mock-keychain --user-data-dir="C:\Users\admin\AppData\Local\Temp\scoped_dir2072_501463372" data:,
+[06-01-2024 12:26:58.115][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[06-01-2024 12:26:58.121][INFO]: [ea43361188fea65dc510ea4f7e80afbe] RESPONSE InitSession {
+   "capabilities": {
+      "acceptInsecureCerts": true,
+      "browserName": "chrome",
+      "browserVersion": "125.0.6422.113",
+      "chrome": {
+         "chromedriverVersion": "125.0.6422.141 (4b1e83937122185343ba92e909b021f307c719ca-refs/branch-heads/6422@{#1186})",
+         "userDataDir": "C:\\Users\\admin\\AppData\\Local\\Temp\\scoped_dir2072_501463372"
+      },
+      "fedcm:accounts": true,
+      "goog:chromeOptions": {
+         "debuggerAddress": "localhost:59458"
+      },
+      "networkConnectionEnabled": false,
+      "pageLoadStrategy": "none",
+      "platformName": "windows",
+      "proxy": {
+      },
+      "setWindowRect": true,
+      "strictFileInteractability": false,
+      "timeouts": {
+         "implicit": 0,
+         "pageLoad": 10000,
+         "script": 3000
+      },
+      "unhandledPromptBehavior": "dismiss and notify",
+      "webauthn:extension:credBlob": true,
+      "webauthn:extension:largeBlob": true,
+      "webauthn:extension:minPinLength": true,
+      "webauthn:extension:prf": true,
+      "webauthn:virtualAuthenticators": true
+   },
+   "sessionId": "ea43361188fea65dc510ea4f7e80afbe"
+}
+[06-01-2024 12:26:58.250][INFO]: [ea43361188fea65dc510ea4f7e80afbe] COMMAND Navigate {
+   "url": "https://google.com"
+}
+[06-01-2024 12:26:58.250][INFO]: Waiting for pending navigations...
+[06-01-2024 12:26:58.250][INFO]: Done waiting for pending navigations. Status: ok
+[06-01-2024 12:26:58.250][INFO]: Waiting for pending navigations...
+[06-01-2024 12:26:58.250][INFO]: Done waiting for pending navigations. Status: ok
+[06-01-2024 12:26:58.250][INFO]: [ea43361188fea65dc510ea4f7e80afbe] RESPONSE Navigate
+[06-01-2024 12:26:58.250][INFO]: [ea43361188fea65dc510ea4f7e80afbe] COMMAND CloseWindow {
+}
+[06-01-2024 12:26:58.402][INFO]: [ea43361188fea65dc510ea4f7e80afbe] RESPONSE CloseWindow [  ]
+[06-01-2024 14:56:23.408][SEVERE]: Unable to receive message from renderer
