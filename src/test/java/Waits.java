@@ -1,3 +1,4 @@
+import jdk.jfr.Description;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.ElementNotInteractableException;
@@ -15,6 +16,7 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 
 public class Waits {
+
   @Test
   public void ImplicitWait () {
     WebDriver chromeDriver = new ChromeDriver();
