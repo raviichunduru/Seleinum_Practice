@@ -13,6 +13,10 @@ public class GetActiveElement {
 
       // Get attribute of current active element
       System.out.println("Title of Active Element : " +driver.switchTo().activeElement().getAttribute("title"));
-      driver.quit();
+
+    System.out.println("Title of current page = " + driver.getTitle());
+    System.out.println("Current URL = " + driver.getCurrentUrl());
+
+    driver.quit();
   }
 }
