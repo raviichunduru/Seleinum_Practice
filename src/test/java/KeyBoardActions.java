@@ -29,10 +29,15 @@ public class KeyBoardActions {
 
     Actions action = new Actions(chromeDriver);
 
-    action.click(sourceElement).keyDown(Keys.CONTROL).keyDown("a").keyUp(Keys.CONTROL).keyUp("a").
+    /*action.click(sourceElement).keyDown(Keys.CONTROL).keyDown("a").keyUp(Keys.CONTROL).keyUp("a").
     keyDown(Keys.CONTROL).keyDown("c").keyUp(Keys.CONTROL).keyUp("c").build().perform();
 
     action.click(destinationElement).keyDown(Keys.CONTROL).keyDown("a").keyUp(Keys.CONTROL).keyUp("a").keyDown(Keys.CONTROL).keyDown("v").keyUp(Keys.CONTROL).keyUp("v").build().perform();
+*/
+
+    action.sendKeys(sourceElement,Keys.CONTROL,"a",Keys.CONTROL,"c")
+          .sendKeys(destinationElement,Keys.CONTROL,"a",Keys.CONTROL,"v")
+          .build().perform();
 
     Assert.assertEquals(sourceElement.getText(),destinationElement.getText());
   }
