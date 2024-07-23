@@ -19,6 +19,7 @@ public class ChromeOptions_Arguments_Logs_Demo {
   public void SeleniumTest1() throws InterruptedException {
 
     ChromeOptions chromeOptions = new ChromeOptions();
+
     chromeOptions.setPageLoadStrategy(PageLoadStrategy.NONE);
     chromeOptions.setAcceptInsecureCerts(true);
     chromeOptions.setPageLoadTimeout(Duration.ofSeconds(10));

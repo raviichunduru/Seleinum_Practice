@@ -21,7 +21,7 @@ public class OptionalAlert {
     if time modified as 5 seconds, alert will show and it gets accepted
     */
 
-    acceptAlertIfPresentElseIgnore (chromeDriver, 3);
+    acceptAlertIfPresentElseIgnore (chromeDriver, 1);
     chromeDriver.quit();
   }
 

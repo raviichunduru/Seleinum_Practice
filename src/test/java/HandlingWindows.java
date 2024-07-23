@@ -1,5 +1,6 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
@@ -12,6 +13,7 @@ public class HandlingWindows {
     WebDriver chromeDriver = new ChromeDriver();
     chromeDriver.get("https://demoqa.com/browser-windows");
     chromeDriver.manage().window().maximize();
+
 
     String parentWindowHandle = chromeDriver.getWindowHandle();
     //System.out.println("Parent Window Handle = " + parentWindowHandle);
