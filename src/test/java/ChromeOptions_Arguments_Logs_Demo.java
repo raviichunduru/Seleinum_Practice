@@ -1,4 +1,3 @@
-import jdk.jfr.Description;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,8 +13,8 @@ import java.util.List;
 
 public class ChromeOptions_Arguments_Logs_Demo {
 
-  @Test()
-  @Description("To demonstrate different chrome options, adding arguments and updating user actions to log file")
+  @Test
+  //@Description("To demonstrate different chrome options, adding arguments and updating user actions to log file")
   public void SeleniumTest1() throws InterruptedException {
 
     ChromeOptions chromeOptions = new ChromeOptions();

@@ -1,4 +1,3 @@
-import jdk.jfr.Description;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,7 +11,6 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-@Description("finding elements relating to other elements left/right/above/below")
 
 public class RelativeLocators {
   @Test

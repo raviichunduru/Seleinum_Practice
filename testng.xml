@@ -1,2 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><suite name="All IRCTCTest Suite"><test verbose="2" preserve-order="true" name="C:/Users/admin/IdeaProjects/Seleinum_Practice"><classes/></test></suite>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All IRCTCTest Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/admin/IdeaProjects/Seleinum_Practice">
+        <classes>
+            <class name="RegistrationFormTest"> </class>
+        </classes>
+    </test>
+</suite>

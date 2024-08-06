@@ -1,4 +1,3 @@
-import jdk.jfr.Description;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.ElementNotInteractableException;
