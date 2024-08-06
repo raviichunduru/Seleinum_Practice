@@ -28,4 +28,5 @@
 //      AmazonUser.BuildUser().setUserName("primeusername").setPassWord("primeuserpassword").setUserType(STANDARD).returnUser(),
 //      AmazonUser.BuildUser().setUserName("primeusername").setPassWord("primeuserpassword").setUserType(NORMAL).returnUser());
 //  }
+//
 //}
