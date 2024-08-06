@@ -25,9 +25,9 @@ public class ProductDetailPage {
 
     static
     {
-      shippingChargeValidationMap.put(PRIME, SHIPPING_CHARGES -> SHIPPING_CHARGES.getText().equals("Free"));
-      shippingChargeValidationMap.put(STANDARD, SHIPPING_CHARGES -> SHIPPING_CHARGES.getText().equals("50 Rs"));
-      shippingChargeValidationMap.put(NORMAL, SHIPPING_CHARGES -> SHIPPING_CHARGES.getText().equals("500 Rs"));
+      shippingChargeValidationMap.put(PRIME, shippingCharges -> shippingCharges.getText().equals("Free"));
+      shippingChargeValidationMap.put(STANDARD, shippingCharges -> shippingCharges.getText().equals("50 Rs"));
+      shippingChargeValidationMap.put(NORMAL, shippingCharges -> shippingCharges.getText().equals("500 Rs"));
     }
 
   public void ValidateShippingCharges(UserType userType) {
