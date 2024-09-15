@@ -19,7 +19,7 @@ public class IRCTCTest {
   }
 
   @Test
-  public void IRCTCTest() {
+  public void testIfUserIsNavigatedTo_BusReservationTab() {
     driver.findElement(By.xpath("//a[text()=' BUSES ']")).click();
     Set<String> windowHandles = driver.getWindowHandles();
 

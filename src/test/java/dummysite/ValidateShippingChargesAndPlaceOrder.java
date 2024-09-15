@@ -1,5 +1,5 @@
-//package dummysite;
-//
+// package dummysite;
+
 //import io.github.sskorol.core.DataSupplier;
 //import org.testng.annotations.Test;
 //import java.util.stream.Stream;
