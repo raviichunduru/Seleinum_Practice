@@ -5,7 +5,6 @@ import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.chromium.ChromiumDriverLogLevel;
 import org.testng.annotations.Test;
-
 import java.io.File;
 import java.time.Duration;
 import java.util.Collections;
