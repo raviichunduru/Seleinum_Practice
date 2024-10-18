@@ -1,3 +1,5 @@
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
 import lombok.SneakyThrows;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -19,6 +21,7 @@ import java.util.Objects;
 public class BrokenLinks {
 
   private WebDriver driver;
+
   private List<String> validLinks = new ArrayList<>();
   private List<String> brokenLinks = new ArrayList<>();
 
@@ -43,29 +46,24 @@ public class BrokenLinks {
             .filter(stringURL->Objects.nonNull(stringURL) && !(stringURL.isBlank()) )
             .forEach(stringURL-> findIfBrokenLink(stringURL));
 
-
     System.out.println("Valid links count: " + validLinks.size());
     System.out.println("Broken links count: " + brokenLinks.size());
   }
 
   private void findIfBrokenLink(String stringURL) {
     try {
-        URL url = new URL(stringURL);
-        HttpURLConnection huc = (HttpURLConnection) (url.openConnection());
-        huc.setRequestMethod("HEAD");
-        huc.connect();
-        int responseCode = huc.getResponseCode();
+      Response response = RestAssured.head(stringURL);
+      int responseCode = response.getStatusCode();
 
-        if (responseCode >= 400 && responseCode < 600) {
-          brokenLinks.add(stringURL);
-        } else {
-          validLinks.add(stringURL);
-        }
-      } catch (Exception e) {
-        /*System.err.println("Error checking URL: " + stringURL);
-        e.printStackTrace();*/
+      if (responseCode >= 400 && responseCode < 600) {
+        brokenLinks.add(stringURL);
+      } else {
+        validLinks.add(stringURL);
       }
+    } catch (Exception e) {
+      e.printStackTrace();
     }
+  }
 
   @AfterTest
   void tearDown() {
