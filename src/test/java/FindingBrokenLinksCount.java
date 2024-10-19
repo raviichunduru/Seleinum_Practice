@@ -1,6 +1,6 @@
 import io.restassured.RestAssured;
-import io.restassured.response.Response;
 import lombok.SneakyThrows;
+import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,15 +10,12 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class BrokenLinks {
+@Slf4j
+public class FindingBrokenLinksCount {
 
   private WebDriver driver;
 
@@ -28,7 +25,7 @@ public class BrokenLinks {
   @BeforeTest
   void setUp() {
     ChromeOptions options = new ChromeOptions();
-    options.addArguments("--headless");
+    options.addArguments("--headless=new");
 
     driver = new ChromeDriver(options);
     driver.manage().window().maximize();
@@ -37,31 +34,31 @@ public class BrokenLinks {
 
   @SneakyThrows
   @Test
-  void brokenLinks() {
+  void findingBrokenLinksCount() {
     List<WebElement> elements = driver.findElements(By.tagName("a"));
-    System.out.println("Total links on the page: " + elements.size());
+    log.info("Total links on the page : {}", elements.size());
 
     elements.parallelStream()
-            .map(ele->ele.getAttribute("href"))
-            .filter(stringURL->Objects.nonNull(stringURL) && !(stringURL.isBlank()) )
-            .forEach(stringURL-> findIfBrokenLink(stringURL));
+      .map(ele -> ele.getAttribute("href"))
+      .filter(stringURL -> Objects.nonNull(stringURL) && !(stringURL.isBlank()))
+      .forEach(stringURL -> findIfLinkIsBroken(stringURL));
 
-    System.out.println("Valid links count: " + validLinks.size());
-    System.out.println("Broken links count: " + brokenLinks.size());
+    log.info("Valid link count : {}", validLinks.size());
+    log.info("Broken link count : {}", brokenLinks.size());
   }
 
-  private void findIfBrokenLink(String stringURL) {
+  private void findIfLinkIsBroken(String stringURL) {
     try {
-      Response response = RestAssured.head(stringURL);
-      int responseCode = response.getStatusCode();
+      int responseCode = RestAssured.get(stringURL).getStatusCode();
 
-      if (responseCode >= 400 && responseCode < 600) {
+      if (responseCode == 404 || responseCode >= 500) {
+        //log.error("Broken link found: {}", stringURL);
         brokenLinks.add(stringURL);
       } else {
         validLinks.add(stringURL);
       }
     } catch (Exception e) {
-      e.printStackTrace();
+      //log.error("Error accessing link: {} - Exception type: {}", stringURL, e.getClass().getSimpleName());
     }
   }
 
@@ -70,4 +67,3 @@ public class BrokenLinks {
     driver.quit();
   }
 }
-
