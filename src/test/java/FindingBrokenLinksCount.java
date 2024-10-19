@@ -25,7 +25,7 @@ public class FindingBrokenLinksCount {
   @BeforeTest
   void setUp() {
     ChromeOptions options = new ChromeOptions();
-    options.addArguments("--headless=new");
+    //options.addArguments("--headless=new");
 
     driver = new ChromeDriver(options);
     driver.manage().window().maximize();
