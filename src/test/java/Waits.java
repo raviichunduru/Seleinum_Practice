@@ -75,7 +75,7 @@ public class Waits {
       .pollingEvery(Duration.ofMillis(500))
       .ignoring(StaleElementReferenceException.class, ElementNotInteractableException.class);
 
-    wait.until( element -> {
+    wait.until(element -> {
       revealed.sendKeys("testing");
       return true;
     });

@@ -18,12 +18,14 @@
         <maven-surefire-report-plugin>3.5.0</maven-surefire-report-plugin>
         <selenium-java-version>4.25.0</selenium-java-version>
         <lombok-version>1.18.34</lombok-version>
-        <slf4j.version>2.0.9</slf4j.version>
+        <slf4j.version>1.7.32</slf4j.version>
         <logback-classic.version>1.4.13</logback-classic.version>
         <testng-version>7.8.0</testng-version>
         <rest-assured-version>5.5.0</rest-assured-version>
-        <assertj-core-version>3.26.3</assertj-core-version>
-        <!--<test-data-supplier-version>2.3.0</test-data-supplier-version>-->
+        <assertj-core-version>3.24.2</assertj-core-version>
+        <test-data-supplier-version>2.3.0</test-data-supplier-version>
+        <jackson-databind-version>2.18.0</jackson-databind-version>
+
     </properties>
 
     <dependencies>
@@ -68,8 +70,8 @@
             <groupId>io.github.sskorol</groupId>
             <artifactId>test-data-supplier</artifactId>
             <version>${test-data-supplier-version}</version>
-        </dependency>-->
-
+        </dependency>
+-->
 
         <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
         <dependency>
@@ -90,6 +92,15 @@
             <artifactId>logback-classic</artifactId>
             <version>${logback-classic.version}</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson-databind-version}</version>
+        </dependency>
+
+
     </dependencies>
     <build>
         <plugins>
